@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<!-- source: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp -->
+<!-- source lightbox: https://github.com/ashleydw/lightbox -->
+<article>
+
+    <header>
+        <h1>{{ page.title }}</a></h1>
+    </header>
+
+    <section class="gallery row">
+
+        {% assign my_array = "" | split: ',' %}
+        {% for file in site.static_files %}
+            {% if file.path contains page.folder_path and file.path contains 'thumbs' %}
+                {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+                    {% assign my_array = my_array | push: file.path %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        
+        <div class="row"> 
+            <div class="column">
+                {% for image in my_array %}
+                    {% assign loopindex = forloop.index0 | modulo: 4 %}
+                    {% if loopindex == 0 %}
+                        <a href="{{ image  | replace: '/thumbs/', '/'}}" data-toggle="lightbox" data-gallery="example-gallery">
+                            <img src="{{ image }}" />
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for image in my_array %}
+                    {% assign loopindex = forloop.index0 | modulo: 4 %}
+                    {% if loopindex == 1 %}
+                        <a href="{{ image  | replace: '/thumbs/', '/'}}" data-toggle="lightbox" data-gallery="example-gallery">
+                            <img src="{{ image }}" />
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for image in my_array %}
+                    {% assign loopindex = forloop.index0 | modulo: 4 %}
+                    {% if loopindex == 2 %}
+                        <a href="{{ image  | replace: '/thumbs/', '/'}}" data-toggle="lightbox" data-gallery="example-gallery">
+                            <img src="{{ image }}" />
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="column">
+                {% for image in my_array %}
+                    {% assign loopindex = forloop.index0 | modulo: 4 %}
+                    {% if loopindex == 3 %}
+                        <a href="{{ image  | replace: '/thumbs/', '/'}}" data-toggle="lightbox" data-gallery="example-gallery">
+                            <img src="{{ image }}" />
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+</article>
+

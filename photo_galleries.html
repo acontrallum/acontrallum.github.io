@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article>
+
+    <header>
+        <h1>Photo Galleries</a></h1>
+    </header>
+
+    <section>
+
+        <div class="container gallery-wrapper">
+            <div class="row">
+                {% assign sorted_galleries = site.photo_galleries | sort:"date" | reverse  %}
+
+
+                {% for gallery in sorted_galleries %}
+
+                    {% for file in site.static_files %}
+                        {% if file.path contains gallery.folder_path and file.path contains gallery.best_image and file.path contains 'thumbs' %}
+                            {% assign gallery_image = file.path %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="col-sm-4 gallery_item">
+                        <a href="{{ gallery.url }}">
+                            <img class="gallery-best-image" src="{{ gallery_image }}">
+                        </a>
+                        <h3 class="gallery_name"><a href="{{ gallery.url }}">{{ gallery.title }}</a></h3>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</article>
