@@ -50,13 +50,18 @@ class Watermarker():
             elif self.watermark_position == 'bottomcenter':
                 position = ((width - watermark_width)/2, height - watermark_height)
             else:
-                position = (0,0)
+                position = (0, 0)
+
+            position = (round(position[0]), round(position[1]))
             
             transparent = Image.new('RGBA', (width, height), (0,0,0,0))
             transparent.paste(base_image, (0,0))
             transparent.paste(watermark, position, mask=watermark)
             transparent.thumbnail((1000,1000), Image.ANTIALIAS)
-            transparent.save(watermarked_path)
+
+            rgb_im = transparent.convert('RGB')
+
+            rgb_im.save(watermarked_path)
 
     def generate_watermarked_images_and_thumbs(self, path):
 
