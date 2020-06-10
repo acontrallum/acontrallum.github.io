@@ -46,6 +46,17 @@ exclude:
 
 permalink: pretty
 
+collections_dir: collections
 collections:
   photo_galleries:
     output: true
+  talks:
+    output: true
+  exhibitions:
+    output: true
+
+feed:
+  collections:
+    - photo_galleries
+    - talks
+    - exhibitions

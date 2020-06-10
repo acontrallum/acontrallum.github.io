@@ -2,6 +2,26 @@
 // Bootswatch
 
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.language_columns {
+    margin-bottom: 30px;
+    text-align: center;
+
+    .lang_left {
+        border-right: 1px solid rgba(0, 0, 0, 0.125);
+    }
+}
+
+img {
+    &.float-left {
+        margin-right: 20px;
+    }
+}
+
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !default;

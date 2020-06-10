@@ -1,19 +1,23 @@
 ---
 layout: page
-title: Contact me!
+title: Contact us!
 id: contact
 ---
 
-<!-- <i class="fas fa-envelope-square"></i> Email: acontrallum.cat at gmail.com
+<div class="row language_columns">
+    <div class="col-md-6 lang_left">
+        [CA] 
+        <br/>
+        Benvingut/-da! En aquest lloc web comparteixo alguns projectes personals i també projectes comuns amb <a href="https://clarobscur.github.io" target="_blank">clarobscur</a> sobre viatges, muntanya i fotografia.        
+    </div>
+    <div class="col-md-6 lang_right">
+        [EN] 
+        <br/>
+        Welcome! In this site, I share some personal projects and also some common projects with <a href="https://clarobscur.github.io" target="_blank">clarobscur</a> related to travel, mountain and photography. 
+    </div>
+</div>
 
-<i class="fab fa-twitter-square"></i> Twitter: <a href="https://twitter.com/acontrallum" target="_blank">https://twitter.com/acontrallum</a>
-
-<i class="fab fa-linkedin"></i> Linkedin: <a href="https://www.linkedin.com/in/lpmayos" target="_blank">https://www.linkedin.com/in/lpmayos</a> -->
-
-
-<div class="container contact_box">
-
-  <div class="row">
+<div class="row contact_box">
     <div class="col-md-4">
       <div class="card py-4 h-100">
         <div class="card-body text-center">
@@ -49,6 +53,5 @@ id: contact
         </div>
       </div>
     </div>
-  </div>
-
 </div>
+

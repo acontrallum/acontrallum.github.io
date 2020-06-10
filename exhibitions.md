@@ -1,0 +1,4 @@
+---
+layout: exhibitions
+title: Exhibitions
+---
