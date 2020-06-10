@@ -9,27 +9,6 @@ layout: default
             <section>
                 {{ content }}
             </section>
-
-<!--             <div class="container gallery-wrapper">
-                <div class="row">
-                    {% for gallery in site.photo_galleries limit:3 %}
-
-                        {% for file in site.static_files %}
-                            {% if file.path contains gallery.folder_path and file.path contains gallery.best_image and file.path contains 'thumbs' %}
-                                {% assign gallery_image = file.path %}
-                            {% endif %}
-                        {% endfor %}
-
-                        <div class="col-sm-4">
-                            <a href="{{ gallery.url }}">
-                                <img class="gallery-best-image" src="{{ gallery_image }}">
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div> -->
-
-
         </div>
 
         <div id="news" class="col-sm-4">

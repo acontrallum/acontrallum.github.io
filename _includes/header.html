@@ -18,6 +18,14 @@
           <a class="nav-link" href="{{ site.url }}/photo_galleries">Photo galleries</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.url }}/news">News</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.url }}/contact">Contact me</a>
+        </li>
+
         {%- for path in page_paths -%}
           {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page.title -%}

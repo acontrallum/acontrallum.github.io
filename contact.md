@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact us!
+title: Contact me!
 id: contact
 ---
 
